@@ -1,0 +1,68 @@
+# =====================
+# .NET / ASP.NET Core
+# =====================
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# =====================
+# Visual Studio
+# =====================
+.vs/
+.vscode/
+
+# =====================
+# Rider / JetBrains
+# =====================
+.idea/
+
+# =====================
+# Logs
+# =====================
+*.log
+
+# =====================
+# OS
+# =====================
+Thumbs.db
+.DS_Store
+
+# =====================
+# Publish output
+# =====================
+publish/
+wwwroot/
+
+# =====================
+# Secrets / Config
+# =====================
+appsettings.Development.json
+appsettings.Production.json
+appsettings.json
+appsettings.*.json
+secrets.json
+
+# =====================
+# User-specific
+# =====================
+*.pfx
+*.snk
+
+# =====================
+# Node / Frontend (if any)
+# =====================
+node_modules/
+dist/
+
+# =====================
+# EF Core
+# =====================
+Migrations/
+
+# =====================
+# Test results
+# =====================
+TestResults/

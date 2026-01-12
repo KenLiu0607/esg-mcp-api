@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace esg_mcp_server.Data;
+
+public partial class EsgProdInfoYfy
+{
+    public string OrgCode { get; set; } = null!;
+
+    public string CYear { get; set; } = null!;
+
+    public int ChpPulpMt { get; set; }
+
+    public int ChpPaperMt { get; set; }
+
+    public int ChpCartonMt { get; set; }
+
+    public int YpcartonMt { get; set; }
+
+    public int YpproMt { get; set; }
+
+    public int CpghouseMt { get; set; }
+
+    public int CpgcleanMt { get; set; }
+
+    public string CreateUser { get; set; } = null!;
+
+    public DateTime CreateDate { get; set; }
+
+    public string TransUser { get; set; } = null!;
+
+    public DateTime? TransDate { get; set; }
+}
