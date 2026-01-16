@@ -55,8 +55,8 @@ namespace esg_mcp_server.Controllers
 
             if (data == null)
                 return NotFound();
-                
-            return Ok(new { MaiAgent = data });
+
+            return Ok(new { QueryMetadata = data });
         }
     }
 }
