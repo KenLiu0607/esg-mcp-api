@@ -21,6 +21,22 @@ namespace esg_mcp_server.Controllers
         [HttpGet]
         public async Task<IActionResult> GetList()
         {
+           string cYear = "2022";
+            string OrgCode = "";
+            string UserID = "irenehuang";
+            string LanguageID = "zh-tw";
+            string ChkAuth = "N";
+            //var sp = _db.Database.ExecuteSqlInterpolated(
+            //   $@"
+            //        EXEC [HC].[usp_EsgCheckR1_getList]
+            //            @cYear={cYear},
+            //            @orgCode={OrgCode},
+            //            @userID={UserID},
+            //            @languageID={LanguageID},
+            //            @chkAuth={ChkAuth
+            //    ");
+
+            var sp = await _db.Database.SqlQuery<usp_EsgCheckR1_getList>($"EXEC [HC].[usp_EsgCheckR1_getList] {cYear}, {OrgCode}, {UserID}, {LanguageID}, {ChkAuth}").ToListAsync();
             var users = await _db.Bausers.ToListAsync();
             var contacts = await _db.MaiAgentContacts.ToListAsync();
 

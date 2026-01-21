@@ -1,14 +1,19 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-// appsettings.json configuration SqlConnection 
 builder.Services.AddDbContext<esg_mcp_server.Data.DbHcisContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 
+    );
+
+
+//builder.Services.AddDbContext<FemEContext>(options =>
+//    options.UseSqlServer(builder.Configuration.GetConnectionString("FEMSConnection")));
 
 var app = builder.Build();
 // Configure the HTTP request pipeline.
